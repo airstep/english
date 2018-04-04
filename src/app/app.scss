@@ -13,4 +13,42 @@
 //
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
-// automatically applied to the <body> element in the app.
+// automatically applied to the <body> element in the app. 
+
+.video {
+  min-width: 106pt;
+  min-height: 72pt;
+}
+
+.mainLoadingImg {
+  position:absolute;
+  width: 32pt;
+  height: 32pt;
+  left: 0;
+  right: 0;
+  margin:0 auto;
+  top:50%;
+  transform:translateY(-50%);
+  z-index: 1000;
+}
+
+.title{color:#201715;font-family:"PeaceSans";font-size:45px;font-style:italic;text-transform:uppercase;
+	&.m{font-size: 30px;line-height: 28px;}
+}
+
+@font-face {
+	font-family: 'Conv_peace_sans';
+	src: url('../assets/fonts/peace_sans.eot');
+	src: local('☺'), url('../assets/fonts/peace_sans.woff') format('woff'), url('../assets/fonts/peace_sans.ttf') format('truetype'), url('../assets/fonts/peace_sans.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face{font-family:'PeaceSans';src:url('../assets/fonts/peace_sans.eot');src:local('☺'),url('../assets/fonts/peace_sans.woff') format('woff'),url('../assets/fonts/peace_sans.ttf') format('truetype'),url('../assets/fonts/peace_sans.svg') format('svg');font-weight:normal;font-style:normal;}
+@font-face{font-family:'SFUIDisplay';src:url('../assets/fonts/SFUIDisplay-Light.eot');src:local('☺'),url('../assets/fonts/SFUIDisplay-Light.woff') format('woff'),url('../assets/fonts/SFUIDisplay-Light.ttf') format('truetype'),url('../assets/fonts/SFUIDisplay-Light.svg') format('svg');font-weight:300;font-style:normal;}
+@font-face{font-family:'SFUIDisplay';src:url('../assets/fonts/SFUIDisplay-Bold.eot');src:local('☺'),url('../assets/fonts/SFUIDisplay-Bold.woff') format('woff'),url('../assets/fonts/SFUIDisplay-Bold.ttf') format('truetype'),url('../assets/fonts/SFUIDisplay-Bold.svg') format('svg');font-weight:700;font-style:normal;}
+@font-face{font-family:'SFUIDisplay';src:url('../assets/fonts/SFUIDisplay-Regular.eot');src:local('☺'),url('../assets/fonts/SFUIDisplay-Regular.woff') format('woff'),url('../assets/fonts/SFUIDisplay-Regular.ttf') format('truetype'),url('../assets/fonts/SFUIDisplay-Regular.svg') format('svg');font-weight:normal;font-style:normal;}
+@font-face{font-family:'SFUIDisplay';src:url('../assets/fonts/SFUIDisplay-Heavy.eot');src:local('☺'),url('../assets/fonts/SFUIDisplay-Heavy.woff') format('woff'),url('../assets/fonts/SFUIDisplay-Heavy.ttf') format('truetype'),url('../assets/fonts/SFUIDisplay-Heavy.svg') format('svg');font-weight:800;font-style:normal;}
+
+// default font
+$fontfamily:"SFUIDisplay";

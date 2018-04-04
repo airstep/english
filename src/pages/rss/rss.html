@@ -1,0 +1,24 @@
+<ion-header no-border>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>        
+    <ion-title><a href="link">{{ title }}</a></ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let item of items">
+      <ion-thumbnail item-start (click)="openVideo(item)">
+        <img class="video" [src]="item.image" alt="" />
+        <ion-icon id="videoIcon" ios="ios-videocam" md="md-videocam" *ngIf="item.video" color="light"></ion-icon>
+      </ion-thumbnail>    
+      <ion-label text-wrap item-end (click)="open(item)">{{item.title}}</ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-spinner name="ios" class="mainLoadingImg" *ngIf="isLoading">Loading</ion-spinner>
+</ion-content>

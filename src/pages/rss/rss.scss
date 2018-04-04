@@ -1,0 +1,28 @@
+page-rss {
+  #videoIcon {
+    top: 10pt;
+    left: 15pt;
+    opacity: 0.8;
+    position: absolute;
+  }
+  ion-title {
+    a {
+      color: color($colors, dark)
+    }
+    a:link {
+      text-decoration: none;
+    }
+
+    a:visited {
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    a:active {
+        text-decoration: underline;
+    }
+  }
+}

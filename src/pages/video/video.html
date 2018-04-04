@@ -1,0 +1,35 @@
+<ion-header no-border>
+  <ion-navbar>
+    <ion-title>{{topic}}</ion-title>
+    <ion-searchbar
+      [(ngModel)]="search"
+      [showCancelButton]="true"
+      style="display: none;"
+      placeholder="Поиск видео"
+      (ionInput)="updateAssignByQuery($event.target.value); searching = true;"
+      (ionClear)="updateAssignByQuery(undefined); searching = false;"
+      (ionCancel)="updateAssignByQuery(undefined); searching = false;">
+    </ion-searchbar>                
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let v of results" (click)="open(v)">
+      <ion-thumbnail item-start>
+        <img class="video" [src]="v.thumbnailUrl" alt="" />
+      </ion-thumbnail>
+      <ion-label item-end text-wrap>
+        {{ v.title}}
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-infinite-scroll (ionInfinite)="infiniteScrolling.next($event)" enabled="true">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="Loading">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+    
+  <ion-spinner name="ios" class="mainLoadingImg" *ngIf="isLoading">Loading</ion-spinner>
+</ion-content>

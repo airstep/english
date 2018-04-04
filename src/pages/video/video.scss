@@ -1,0 +1,11 @@
+page-video {
+  ion-content {
+    overflow-y: hidden;
+  }
+  ion-scroll {
+    width: 100%; height: 100%;
+  }
+  ion-searchbar {
+    z-index: 1000 !important;
+  }
+}

@@ -1,0 +1,16 @@
+<ion-header no-border>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Topics</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <button ion-item *ngFor="let item of topics" (click)="itemTapped($event, item)">
+      {{item}}
+    </button>
+  </ion-list>
+</ion-content>

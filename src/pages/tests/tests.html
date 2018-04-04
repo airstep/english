@@ -1,0 +1,19 @@
+<ion-header no-border>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>    
+    <ion-title>Tests</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <button ion-item *ngFor="let item of tests" (click)="open(item)">
+      {{item.title}}
+    </button>
+  </ion-list>
+</ion-content>
